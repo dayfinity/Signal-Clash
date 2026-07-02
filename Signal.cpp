@@ -33,4 +33,22 @@ int main() {
             score += 3;
         }
 
+        if (signal == 0)
+            std::cout << "instagram feed burst detected.\n";
+        else if (signal == 1)
+            std::cout << "telegram channel update received.\n";
+        else
+            std::cout << "neutral network pulse.\n";
+
+        showStatus(score, i);
+    }
+
+    std::cout << "\nFinal Score: " << score << "\n";
+
+    if (score > 60)
+        std::cout << "Elite signal controller!\n";
+    else
+        std::cout << "Training needed.\n";
+
+    return 0;
 }
